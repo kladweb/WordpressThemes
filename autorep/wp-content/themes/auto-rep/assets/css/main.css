@@ -1,0 +1,115 @@
+@import "colors.css";
+
+.company-overview {
+  text-align: center;
+  background-image: linear-gradient(var(--black06), var(--black06)), url(../img/background/inside_02.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.company-intro {
+  padding: 10rem 0 10rem;
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about {
+  margin-bottom: 5rem;
+  background-color: var(--white);
+}
+
+.about__img {
+  float: right;
+  max-width: 100%;
+  margin: 5rem 0 1rem 1rem;
+  box-shadow: 0 10px 25px 0 var(--black03);
+  object-fit: cover;
+}
+
+.about__titles {
+  margin: 0;
+  padding: 3rem 0 1rem;
+}
+
+.about__suptitle {
+  font-size: 2rem;
+  color: var(--grayBlue);
+}
+
+.about__title {
+  font-size: 2.625rem;
+  text-transform: uppercase;
+  color: var(--mutedBlue);
+}
+
+.about__description {
+  color: var(--grayBlue);
+  line-height: 1.5rem;
+}
+
+.about__titles--less {
+  font-size: 1.75rem;
+  color: var(--mutedBlue);
+}
+
+.about__items {
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+.about__item {
+  color: var(--mutedBlue);
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about__item:before {
+  content: url(../img/icons/arrow.png);
+  padding-right: 0.875rem;
+}
+
+.about__button {
+  margin: 0 0 2rem 2rem;
+  text-transform: uppercase;
+}
+
+.main-video {
+  margin: 5em 0 1em;
+  text-align: center;
+}
+
+.main-video video {
+  width: 60em;
+}
+
+/* **@media** */
+@media (max-width: 62rem) {
+  .main-video video {
+    width: 95%;
+  }
+}
+
+@media (max-width: 48rem) {
+  .company-intro {
+    font-size: 2.5rem;
+  }
+
+  .about__img {
+    float: none;
+    position: relative;
+    margin: 2rem 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 48rem) {
+  .company-intro {
+    font-size: 2rem;
+  }
+}

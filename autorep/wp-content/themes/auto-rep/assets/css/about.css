@@ -1,0 +1,148 @@
+@import "colors.css";
+
+.main-about {
+  background-color: var(--white);
+}
+
+.about {
+  max-width: 70%;
+  padding-top: 3em;
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.about__img {
+  max-width: 100%;
+  margin-top: 2em;
+  box-shadow: 0 10px 25px 0 var(--black03);
+}
+
+.about__title {
+  margin-bottom: 0.75em;
+  padding-top: 0.75em;
+  color: var(--mutedBlue);
+  text-align: left;
+  font-size: 2em;
+}
+
+.about__title--text-up {
+  text-transform: uppercase;
+}
+
+.about__description {
+  color: var(--darkBlue);
+  text-align: left;
+  line-height: 1.5em;
+}
+
+/*feedback*/
+.feedback {
+  margin: 0 auto;
+  padding: 0;
+  background: var(--pastel);
+  font-size: 1rem;
+  cursor: default;
+}
+
+.feedback:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.feedback__name {
+  padding: 1em 0 1.5em;
+  font-size: 2.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--darkBlue);
+}
+
+.review {
+  width: 50%;
+}
+
+.review__item {
+  padding: 0 1em 4em;
+}
+
+.review__image img {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+}
+
+.review__content {
+  position: relative;
+  padding: 0.312em 0.9em 0.188em 0.9em;
+  margin-left: 8.75em;
+  background: var(--white);
+}
+
+.review__content:before {
+  content: '';
+  position: absolute;
+  top: 3.5em;
+  left: 0;
+  margin-top: -1em;
+  margin-left: -2em;
+  border: 1em solid transparent;
+  border-right: 1em solid var(--white);
+}
+
+.review__title {
+  border-bottom: 2px dotted var(--pastel);
+  font-style: italic;
+  font-size: 0.875em;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--mutedBlue);
+}
+
+.review__name:before {
+  content: "\002d";
+  margin-right: 3px;
+}
+
+.review__description {
+  margin: 0.625em 0 0.9em;
+  font-size: 1em;
+  color: var(--grayBlue);
+}
+
+.footer-head {
+  background: var(--pastel);
+}
+
+/** @media **/
+@media (max-width: 62rem) {
+  .about {
+    max-width: 65%;
+    margin: 4em 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 48rem) {
+  .about {
+    max-width: 100%;
+    margin-bottom: 2em;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .review {
+    width: 100%;
+  }
+}

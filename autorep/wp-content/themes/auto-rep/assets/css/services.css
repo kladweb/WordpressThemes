@@ -1,0 +1,66 @@
+@import "colors.css";
+
+.serv-items {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.serv-item {
+  max-width: 30%;
+}
+
+.serv-item__rectangle {
+  width: 100%;
+  padding-top: 55%;
+  position: relative;
+  overflow: hidden;
+}
+
+.serv-item__picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+.serv-item__picture:hover {
+  transform: scale(1.1);
+}
+
+.serv-item__name {
+  margin: 1em 0 1em;
+  color: var(--darkBlue);
+}
+
+.serv-item__description {
+  margin-bottom: 4em;
+  color: var(--mutedBlue);
+  line-height: 1.5em;
+}
+
+/** *@media** */
+@media (max-width: 48rem) {
+  .serv-item {
+    max-width: 48%;
+  }
+
+  .serv-item__description {
+    margin-bottom: 3em;
+  }
+}
+
+@media (max-width: 36rem) {
+  .serv-item {
+    max-width: 100%;
+  }
+
+  .serv-item__description {
+    margin-bottom: 3em;
+  }
+}
