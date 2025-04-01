@@ -1312,12 +1312,7 @@ $( function() {
 
 	$( '.bulkactions' ).parents( 'form' ).on( 'submit', function( event ) {
 		var form = this,
-			submitterName = event.originalEvent && event.originalEvent.submitter ? event.originalEvent.submitter.name : false,
-			currentPageSelector = form.querySelector( '#current-page-selector' );
-
-		if ( currentPageSelector && currentPageSelector.defaultValue !== currentPageSelector.value ) {
-			return; // Pagination form submission.
-		}
+			submitterName = event.originalEvent && event.originalEvent.submitter ? event.originalEvent.submitter.name : false;
 
 		// Observe submissions from posts lists for 'bulk_action' or users lists for 'new_role'.
 		var bulkFieldRelations = {

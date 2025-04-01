@@ -89,13 +89,17 @@ body._lock {
 }
 
 .main-header__brand {
-  display: inline-block;
-  margin: 0.5em 0 0.2em;
+  display: inline-flex;
+  align-items: center;
+  height: 5em;
   vertical-align: middle;
 }
 
-.main-header__logo {
+.main-header__brand img {
   max-width: 5em;
+  margin-top: 0.2rem;
+  height: fit-content;
+  object-fit: contain;
 }
 
 .main-nav {
