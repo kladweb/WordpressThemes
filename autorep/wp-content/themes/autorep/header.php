@@ -22,7 +22,7 @@
     <div class="backdrop"></div>
     <div class="modal">
       <h1 class="modal__title">Наш call-центр</h1>
-      <h2 class="modal__number">+375(77)7777777</h2>
+      <h2 class="modal__number"><?php the_field('phone', 2)?></h2>
       <div class="modal__actions">
         <button class="modal__action" type="button">Закрыть</button>
         <button class="modal__close" type="button"></button>
@@ -39,7 +39,7 @@
         <div class="menu__icon"><span></span></div>
         <ul class="main-nav__items">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="pages/services.html">Наши услуги</a>
+            <a class="main-nav__link" href="/services/">Наши услуги</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="pages/about.html">О нас</a>

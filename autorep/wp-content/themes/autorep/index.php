@@ -4,21 +4,28 @@
     <main>
       <section class="company-overview">
         <div class="content">
-          <h2 class="company-intro">Полный комплекс<br>обслуживания автомобилей</h2>
+          <h1 class="company-intro"><?php the_field('head_main_page') ?></h1>
         </div>
       </section>
       <section class="about">
         <div class="content">
-          <img class="about__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/shared/int_02.jpg" alt="interior" title="Комната ожидания">
+          <?php 
+              $image = get_field('about__img');
+              if (!empty($image)): ?>
+          <img class="about__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+          <?php endif; ?>
           <h2 class="about__titles">
-            <span class="about__suptitle">Несколько слов</span><br>
-            <span class="about__title">о нашей компании</span>
+            <!-- <span class="about__suptitle">Несколько слов</span><br>
+            <span class="about__title">о нашей компании</span> -->
+            <span class="about__suptitle"><?php the_field('about__suptitle') ?></span>
+            <?php 
+                if (!empty(get_field('about__suptitle'))): ?>
+            <br>
+            <?php endif;
+            ?>
+            <span class="about__title"><?php the_field('about__title') ?></span>
           </h2>
-          <p class="about__description">
-            Эффективное обслуживание клиентов является главным приоритетом и ключом к нашему успеху. С того момента,
-            как вы зайдете в автоцентр "AUTO-REP", вы заметите, что мы не обычная автомастерская. Чистый зал ожидания,
-            свежий кофе и комфортная комната клиента — вот лишь некоторые из плюсов, которыми мы можем Вас удивить.
-          </p>
+          <p class="about__description"><?php the_field('about__description') ?></p>
           <h2 class="about__titles about__titles--less">Почему МЫ?</h2>
           <ul class="about__items">
             <li class="about__item"><strong>Доверие:</strong> когда дело доходит до ремонта автомобилей, чтобы
@@ -40,8 +47,10 @@
           <div class="clear"></div>
           <div class="main-video">
             <video controls="controls" poster="<?php echo bloginfo('template_url'); ?>/assets/video/poster.jpg">
-              <source src="<?php echo bloginfo('template_url'); ?>/assets/video/AUTO-REP.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-              <source src="<?php echo bloginfo('template_url'); ?>/assets/video/AUTO-REP.webm" type='video/webm; codecs="vp8, vorbis"'>
+              <source src="<?php echo bloginfo('template_url'); ?>/assets/video/AUTO-REP.mp4"
+                type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+              <source src="<?php echo bloginfo('template_url'); ?>/assets/video/AUTO-REP.webm"
+                type='video/webm; codecs="vp8, vorbis"'>
               Видео не поддерживается Вашим браузером.
             </video>
           </div>
