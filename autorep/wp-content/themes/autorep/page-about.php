@@ -1,0 +1,209 @@
+<?php
+/*
+Template Name: О компании
+*/
+?>
+
+<?php
+get_header();
+?>
+
+<div class="page-header">
+  <div class="content">
+    <span><a class="page-header__home" href="../index.html">Главная</a></span>
+    <span class="page-header__sep">/</span>
+    <span class="page-header__title">О компании</span>
+    <h1 class="page-header__name">О компании</h1>
+  </div>
+</div>
+<div class="content container-flex">
+  <aside class="popular">
+    <h2 class="popular-head">Наши партнеры</h2>
+    <div class="popular__title">
+      <a class="popular__link" href="#" title="СТО MIBRO">
+        <img class="popular__img" src="../img/partners/MIBRO.jpg" alt="Mibro">
+      </a>
+      <a class="popular__item" href="#">
+        <span>СТО МИБРО на Тимирязева (г.Минск)</span>
+      </a>
+    </div>
+    <div class="popular__title">
+      <a class="popular__link" href="#" title="Ремонт автостекол">
+        <img class="popular__img" src="../img/partners/SKOL.jpg" alt="SKOL">
+      </a>
+      <a class="popular__item" href="#">
+        <span>Ремонт, восстановление автостекол</span>
+      </a>
+    </div>
+    <div class="popular__title popular__title--pos-last">
+      <a class="popular__link" href="#" title="Ответственный ремонт авто">
+        <img class="popular__img" src="../img/partners/STO7.jpg" alt="SKOL">
+      </a>
+      <a class="popular__item" href="#">
+        <span>Ответственный ремонт авто для хороших людей</span>
+      </a>
+    </div>
+    <h2 class="popular-head">Популярные статьи</h2>
+    <div class="popular__title">
+      <a class="popular__link" href="articles.html#car-rims">
+        <img class="popular__img" src="../img/shared/car-rims.jpg" alt="car-rims">
+      </a>
+      <a class="popular__item" href="articles.html#car-rims">
+        <span>Какие диски лучше стальные или легкосплавные?</span>
+      </a>
+    </div>
+    <div class="popular__title">
+      <a class="popular__link" href="articles.html#electro-car">
+        <img class="popular__img" src="../img/services/electrocar.jpg" alt="electrocar">
+      </a>
+      <a class="popular__item" href="articles.html#electro-car">
+        <span>Гибридные и электрические автомобили</span>
+      </a>
+    </div>
+    <div class="popular__title">
+      <a class="popular__link" href="articles.html#car-body">
+        <img class="popular__img" src="../img/shared/car-body.jpg" alt="car-body">
+      </a>
+      <a class="popular__item" href="articles.html#car-body">
+        <span>Проверяем кузов автомобиля перед покупкой</span>
+      </a>
+    </div>
+    <div class="popular__title">
+      <a class="popular__link" href="articles.html#car-greasing">
+        <img class="popular__img" src="../img/shared/car-greasing.jpg" alt="car-greasing">
+      </a>
+      <a class="popular__item" href="articles.html#car-greasing">
+        <span>Автомобильная силиконовая смазка</span>
+      </a>
+    </div>
+    <div class="popular__title popular__title--pos-last">
+      <a class="popular__link" href="articles.html#car-abs">
+        <img class="popular__img" src="../img/shared/car-abs.jpg" alt="car-abs">
+      </a>
+      <a class="popular__item" href="articles.html#car-abs">
+        <span>Три буквы: почему горит лампочка ABS и как это исправить?</span>
+      </a>
+    </div>
+  </aside>
+  <main class="main-about">
+    <section class="about">
+      <h2 class="about__title"><?php the_field('mainabout_1') ?></h2>
+      <p class="about__description"><?php the_field('descrabout_1') ?></p>
+      <img class="about__img" src="../img/shared/about.jpg" alt="about">
+      <h2 class="about__title">О нашей деятельности</h2>
+      <p class="about__description">
+        Никто не ждет того времени, когда его автомобиль потребует внимания. Мы в AUTO-REP понимаем. Мы
+        предоставляем правильные решения. Наши команды профессионалов разбираются в автомобилях и понимают людей,
+        которые ими водят. Мы используем передовые технологии и предлагаем качественные запчасти от брендов, которым
+        вы доверяете, — все это делает уход за автомобилем более комфортным.
+      </p>
+      <h2 class="about__title about__title--text-up">С сервисами AUTO-REP удобно</h2>
+      <p class="about__description">
+        Мы понимаем, что вы заняты. Мы знаем, что никогда не бывает подходящего времени для работы над вашим
+        автомобилем. На наших станциях AUTO-REP мы делаем все возможное, чтобы ваши впечатления превосходили ваши
+        ожидания. От регистрации до выдачи автомобиля или мотоцикла наши консультанты по автосервису и техники
+        работают, чтобы как можно быстрее подготовить ваш автомобиль к работе.
+      </p>
+    </section>
+    <div class="clear"></div>
+  </main>
+</div>
+<section class="feedback">
+  <div class="content">
+    <h2 class="feedback__name">Что говорят наши <span>клиенты</span></h2>
+    <div class="review fl">
+      <div class="review__item">
+        <div class="review__image fl">
+          <img src="../img/people/Andrey.jpg" title="Андрей К." alt="Andrey">
+        </div>
+        <div class="review__content">
+          <div class="review__title">
+            <span class="review__name">Андрей К.</span>
+            <span class="review__client fr">15.09.2022г.</span>
+          </div>
+          <p class="review__description clearfix">
+            Редко в Сто можно встретить действительно порядочных людей, вежливых, ответственных, которые
+            действительно хотят помочь и делают это профессионально. Выражаю огромную благодарность руководству и
+            лично автослесарю Сергею.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="review fl">
+      <div class="review__item">
+        <div class="review__image fl">
+          <img src="../img/people/Tatyana.jpg" title="Татьяна О." alt="Tatyana">
+        </div>
+        <div class="review__content">
+          <div class="review__title">
+            <span class="review__name">Татьяна О.</span>
+            <span class="review__client fr">24.08.2022г.</span>
+          </div>
+          <p class="review__description">
+            Сегодня забрала свою машинку (Mazda 3) и как всегда была приятно удивлена: все сделали быстро, недорого,
+            хорошие запчасти поставили (муж проверил), а про обслуживание можно много говорить. Два года езжу в этот
+            сервис по совету своих знакомых и ТО делать, и ремонтироваться.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="review fl">
+      <div class="review__item">
+        <div class="review__image fl">
+          <img src="../img/people/Elena.jpg" title="Елена Н." alt="Elena">
+        </div>
+        <div class="review__content">
+          <div class="review__title">
+            <span class="review__name">Елена Н.</span>
+            <span class="review__client fr">07.08.2022г.</span>
+          </div>
+          <p class="review__description">
+            Вежливый коллектив, ответственные работники. По запросу на вайбер написали ориентировочную стоимость
+            запчастей и работы. Лишнего не сдалали, не обманули как на предыдущем сто! Оперативно записали, взяли в
+            работу машину сразу.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="review fl">
+      <div class="review__item">
+        <div class="review__image fl">
+          <img src="../img/people/Mihail.jpg" title="Михаил Ш." alt="Mihail">
+        </div>
+        <div class="review__content">
+          <div class="review__title">
+            <span class="review__name">Михаил Ш.</span>
+            <span class="review__client fr">18.07.2022г.</span>
+          </div>
+          <p class="review__description">
+            Являюсь постоянным клиентом данного СТО. устраняют всё в договоренные сроки, закупают запчасти по
+            хорошим ценам (дешевле чем самому покупать). вообщем загнал и они всё сами делают, все работы
+            согласовывают. цены приемлемы в сравнении с конкурентами. я доволен
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="review fl">
+      <div class="review__item">
+        <div class="review__image fl">
+          <img src="../img/people/Sergey.jpg" title="Сергей Н." alt="Sergey">
+        </div>
+        <div class="review__content">
+          <div class="review__title">
+            <span class="review__name">Сергей Н.</span>
+            <span class="review__client fr">10.07.2022г.</span>
+          </div>
+          <p class="review__description">
+            Спасибо за быструю и качественную работу по промывке и проверке форсунок на моем автомобиле. Проблема
+            была устранена буквально за час-полтора, и я уехал на исправном авто. Всем доволен. Даже сделали скидку
+            как пенсионеру. Буду и дальше пользоваться услугами зтого СТО.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
+get_footer();
+?>

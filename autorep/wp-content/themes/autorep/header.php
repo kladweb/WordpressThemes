@@ -42,7 +42,7 @@
             <a class="main-nav__link" href="/services/">Наши услуги</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="pages/about.html">О нас</a>
+            <a class="main-nav__link" href="/about/">О нас</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="pages/towing.html">Буксировка и техпомощь</a>

@@ -20,14 +20,13 @@ get_header();
   <section id="services">
     <div class="content serv-items">
       <?php 
-        // параметры по умолчанию
         $my_posts = get_posts( array(
           'numberposts' => -1,
           'category'    => 0,
           'orderby'     => 'date',
           'order'       => 'ASC',
           'post_type'   => 'post',
-          'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          'suppress_filters' => true,
         ) );
 
           global $post;
@@ -38,19 +37,15 @@ get_header();
             ?>
       <div class="serv-item">
         <div class="serv-item__rectangle">
-          <!-- <img class="serv-item__picture" src="../img/services/oil-change.jpg" alt="oil-change" title="Замена масла"> -->
           <img class="serv-item__picture" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
             title="<?php echo $image['alt']; ?>">
         </div>
-        <!-- <h2 class="serv-item__name">Замена моторного масла</h2> -->
         <h2 class="serv-item__name"><?php the_title() ?></h2>
-        <!-- <p class="serv-item__description">Производим замену моторных масел. В частности, предлагаем богатый
-                  ассортимент масел Shel, ENI, Total и фильтров KNECHT.</p> -->
         <p class="serv-item__description"><?php the_field('service_descr') ?></p>
       </div>
       <?php
           }
-          wp_reset_postdata(); // сброс
+          wp_reset_postdata();
         ?>
     </div>
   </section>

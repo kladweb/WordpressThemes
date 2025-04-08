@@ -1,4 +1,4 @@
-@import "colors.css";
+@import 'colors.css';
 
 .main-about {
   background-color: var(--white);
@@ -46,7 +46,7 @@
 }
 
 .feedback:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -110,7 +110,7 @@
 }
 
 .review__name:before {
-  content: "\002d";
+  content: '\002d';
   margin-right: 3px;
 }
 
