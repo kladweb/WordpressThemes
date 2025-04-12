@@ -7,7 +7,7 @@
     wp_enqueue_style('autorep-style', get_stylesheet_uri());
 
     if (is_front_page()) {
-      wp_enqueue_style('services-style', get_template_directory_uri() . '/assets/css/main.css');
+      wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/main.css');
     }
 
     if (is_page('services')) {
@@ -17,9 +17,25 @@
     if (is_page('about')) {
       wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/about.css');
     }
+
+    if (is_page('towing')) {
+      wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/towing.css');
+    }
+
+    if (is_page('articles')) {
+      wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/articles.css');
+    }
     
     wp_enqueue_script('autorep-scripts', get_template_directory_uri() . '/assets/js/modal.js', array(), null, true);
-    wp_enqueue_script('autorep-scripts', get_template_directory_uri() . '/assets/js/scroll-up.js', array(), null, true);
+    wp_enqueue_script('scroll-scripts', get_template_directory_uri() . '/assets/js/scroll-up.js', array(), null, true);
+
+    if (is_page('towing')) {
+      wp_enqueue_script('scroll-parallax', get_template_directory_uri() . '/assets/js/parallax.js', array(), null, true);
+    }
+
+    if (is_page('articles')) {
+      wp_enqueue_script('scroll-show-cont', get_template_directory_uri() . '/assets/js/show-cont.js', array(), null, true);
+    }
   };
 
 /*

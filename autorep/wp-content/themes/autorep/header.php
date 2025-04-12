@@ -45,10 +45,10 @@
             <a class="main-nav__link" href="/about/">О нас</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="pages/towing.html">Буксировка и техпомощь</a>
+            <a class="main-nav__link" href="/towing/">Буксировка и техпомощь</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="pages/articles.html">Статьи</a>
+            <a class="main-nav__link" href="/articles/">Статьи</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="pages/vacancies.html">Вакансии</a>

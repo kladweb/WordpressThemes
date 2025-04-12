@@ -24,7 +24,7 @@
           // параметры по умолчанию
         $my_posts = get_posts( array(
           'numberposts' => 4,
-          'category'    => 0,
+          'category_name' => 'services',
           'orderby'     => 'rand', // выбираем случайные посты
           'post_type'   => 'post',
           'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса

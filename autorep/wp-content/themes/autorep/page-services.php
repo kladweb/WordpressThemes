@@ -22,7 +22,7 @@ get_header();
       <?php 
         $my_posts = get_posts( array(
           'numberposts' => -1,
-          'category'    => 0,
+          'category_name' => 'services',
           'orderby'     => 'date',
           'order'       => 'ASC',
           'post_type'   => 'post',
@@ -34,7 +34,7 @@ get_header();
           foreach( $my_posts as $post ) {
             setup_postdata( $post );
             $image = get_field('service_img');
-            ?>
+        ?>
       <div class="serv-item">
         <div class="serv-item__rectangle">
           <img class="serv-item__picture" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
@@ -46,7 +46,7 @@ get_header();
       <?php
           }
           wp_reset_postdata();
-        ?>
+      ?>
     </div>
   </section>
 </main>

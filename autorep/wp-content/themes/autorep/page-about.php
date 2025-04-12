@@ -19,30 +19,36 @@ get_header();
 <div class="content container-flex">
   <aside class="popular">
     <h2 class="popular-head">Наши партнеры</h2>
+    <?php 
+        $my_posts = get_posts( array(
+          'numberposts' => -1,
+          'category_name' => 'partners',
+          'orderby'     => 'date',
+          'order'       => 'ASC',
+          'post_type'   => 'post',
+          'suppress_filters' => true,
+        ) );
+
+          global $post;
+
+          foreach( $my_posts as $post ) {
+            setup_postdata( $post );
+            $image = get_field('company_logo');
+            ?>
     <div class="popular__title">
-      <a class="popular__link" href="#" title="СТО MIBRO">
-        <img class="popular__img" src="../img/partners/MIBRO.jpg" alt="Mibro">
+      <a class="popular__link" href="<?php the_field('company_url') ?>" title="<?php echo $image['alt']; ?>"
+        target="_blank">
+        <img class="popular__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
+          title="<?php echo $image['alt']; ?>">
       </a>
-      <a class="popular__item" href="#">
-        <span>СТО МИБРО на Тимирязева (г.Минск)</span>
-      </a>
-    </div>
-    <div class="popular__title">
-      <a class="popular__link" href="#" title="Ремонт автостекол">
-        <img class="popular__img" src="../img/partners/SKOL.jpg" alt="SKOL">
-      </a>
-      <a class="popular__item" href="#">
-        <span>Ремонт, восстановление автостекол</span>
+      <a class="popular__item" href="<?php the_field('company_url') ?>" target="_blank">
+        <span><?php the_field('company_name') ?></span>
       </a>
     </div>
-    <div class="popular__title popular__title--pos-last">
-      <a class="popular__link" href="#" title="Ответственный ремонт авто">
-        <img class="popular__img" src="../img/partners/STO7.jpg" alt="SKOL">
-      </a>
-      <a class="popular__item" href="#">
-        <span>Ответственный ремонт авто для хороших людей</span>
-      </a>
-    </div>
+    <?php
+      }
+      wp_reset_postdata();
+    ?>
     <h2 class="popular-head">Популярные статьи</h2>
     <div class="popular__title">
       <a class="popular__link" href="articles.html#car-rims">
@@ -89,21 +95,17 @@ get_header();
     <section class="about">
       <h2 class="about__title"><?php the_field('mainabout_1') ?></h2>
       <p class="about__description"><?php the_field('descrabout_1') ?></p>
-      <img class="about__img" src="../img/shared/about.jpg" alt="about">
-      <h2 class="about__title">О нашей деятельности</h2>
-      <p class="about__description">
-        Никто не ждет того времени, когда его автомобиль потребует внимания. Мы в AUTO-REP понимаем. Мы
-        предоставляем правильные решения. Наши команды профессионалов разбираются в автомобилях и понимают людей,
-        которые ими водят. Мы используем передовые технологии и предлагаем качественные запчасти от брендов, которым
-        вы доверяете, — все это делает уход за автомобилем более комфортным.
-      </p>
-      <h2 class="about__title about__title--text-up">С сервисами AUTO-REP удобно</h2>
-      <p class="about__description">
-        Мы понимаем, что вы заняты. Мы знаем, что никогда не бывает подходящего времени для работы над вашим
-        автомобилем. На наших станциях AUTO-REP мы делаем все возможное, чтобы ваши впечатления превосходили ваши
-        ожидания. От регистрации до выдачи автомобиля или мотоцикла наши консультанты по автосервису и техники
-        работают, чтобы как можно быстрее подготовить ваш автомобиль к работе.
-      </p>
+      <!-- <img class="about__img" src="../img/shared/about.jpg" alt="about"> -->
+      <?php 
+              $image = get_field('img_about');
+                if (!empty($image)): ?>
+      <img class="about__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+      <?php endif; 
+          ?>
+      <h2 class="about__title"><?php the_field('mainabout_2') ?></h2>
+      <p class="about__description"><?php the_field('descrabout_2') ?></p>
+      <h2 class="about__title about__title--text-up"><?php the_field('mainabout_3') ?></h2>
+      <p class="about__description"><?php the_field('descrabout_3') ?></p>
     </section>
     <div class="clear"></div>
   </main>
@@ -111,96 +113,41 @@ get_header();
 <section class="feedback">
   <div class="content">
     <h2 class="feedback__name">Что говорят наши <span>клиенты</span></h2>
+    <?php 
+        $my_posts = get_posts( array(
+          'numberposts' => -1,
+          'category_name' => 'otzyvy',
+          'orderby'     => 'date',
+          'order'       => 'ASC',
+          'post_type'   => 'post',
+          'suppress_filters' => true,
+        ) );
+
+          global $post;
+
+          foreach( $my_posts as $post ) {
+            setup_postdata( $post );
+            $image = get_field('client_foto');
+            ?>
     <div class="review fl">
       <div class="review__item">
         <div class="review__image fl">
-          <img src="../img/people/Andrey.jpg" title="Андрей К." alt="Andrey">
+          <img src="<?php echo $image['url']; ?>" title="<?php echo $image['alt']; ?>"
+            alt="<?php echo $image['alt']; ?>">
         </div>
         <div class="review__content">
           <div class="review__title">
-            <span class="review__name">Андрей К.</span>
-            <span class="review__client fr">15.09.2022г.</span>
+            <span class="review__name"><?php the_title() ?></span>
+            <span class="review__client fr"><?php the_field('feedback_date') ?></span>
           </div>
-          <p class="review__description clearfix">
-            Редко в Сто можно встретить действительно порядочных людей, вежливых, ответственных, которые
-            действительно хотят помочь и делают это профессионально. Выражаю огромную благодарность руководству и
-            лично автослесарю Сергею.
-          </p>
+          <p class="review__description clearfix"><?php the_field('feedback_text') ?></p>
         </div>
       </div>
     </div>
-    <div class="review fl">
-      <div class="review__item">
-        <div class="review__image fl">
-          <img src="../img/people/Tatyana.jpg" title="Татьяна О." alt="Tatyana">
-        </div>
-        <div class="review__content">
-          <div class="review__title">
-            <span class="review__name">Татьяна О.</span>
-            <span class="review__client fr">24.08.2022г.</span>
-          </div>
-          <p class="review__description">
-            Сегодня забрала свою машинку (Mazda 3) и как всегда была приятно удивлена: все сделали быстро, недорого,
-            хорошие запчасти поставили (муж проверил), а про обслуживание можно много говорить. Два года езжу в этот
-            сервис по совету своих знакомых и ТО делать, и ремонтироваться.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="review fl">
-      <div class="review__item">
-        <div class="review__image fl">
-          <img src="../img/people/Elena.jpg" title="Елена Н." alt="Elena">
-        </div>
-        <div class="review__content">
-          <div class="review__title">
-            <span class="review__name">Елена Н.</span>
-            <span class="review__client fr">07.08.2022г.</span>
-          </div>
-          <p class="review__description">
-            Вежливый коллектив, ответственные работники. По запросу на вайбер написали ориентировочную стоимость
-            запчастей и работы. Лишнего не сдалали, не обманули как на предыдущем сто! Оперативно записали, взяли в
-            работу машину сразу.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="review fl">
-      <div class="review__item">
-        <div class="review__image fl">
-          <img src="../img/people/Mihail.jpg" title="Михаил Ш." alt="Mihail">
-        </div>
-        <div class="review__content">
-          <div class="review__title">
-            <span class="review__name">Михаил Ш.</span>
-            <span class="review__client fr">18.07.2022г.</span>
-          </div>
-          <p class="review__description">
-            Являюсь постоянным клиентом данного СТО. устраняют всё в договоренные сроки, закупают запчасти по
-            хорошим ценам (дешевле чем самому покупать). вообщем загнал и они всё сами делают, все работы
-            согласовывают. цены приемлемы в сравнении с конкурентами. я доволен
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="review fl">
-      <div class="review__item">
-        <div class="review__image fl">
-          <img src="../img/people/Sergey.jpg" title="Сергей Н." alt="Sergey">
-        </div>
-        <div class="review__content">
-          <div class="review__title">
-            <span class="review__name">Сергей Н.</span>
-            <span class="review__client fr">10.07.2022г.</span>
-          </div>
-          <p class="review__description">
-            Спасибо за быструю и качественную работу по промывке и проверке форсунок на моем автомобиле. Проблема
-            была устранена буквально за час-полтора, и я уехал на исправном авто. Всем доволен. Даже сделали скидку
-            как пенсионеру. Буду и дальше пользоваться услугами зтого СТО.
-          </p>
-        </div>
-      </div>
-    </div>
+    <?php
+      }
+      wp_reset_postdata();
+    ?>
   </div>
 </section>
 

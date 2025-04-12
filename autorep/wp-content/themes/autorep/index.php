@@ -11,9 +11,10 @@
         <div class="content">
           <?php 
               $image = get_field('about__img');
-              if (!empty($image)): ?>
+                if (!empty($image)): ?>
           <img class="about__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-          <?php endif; ?>
+          <?php endif; 
+          ?>
           <h2 class="about__titles">
             <!-- <span class="about__suptitle">Несколько слов</span><br>
             <span class="about__title">о нашей компании</span> -->
