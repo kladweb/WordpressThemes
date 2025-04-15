@@ -1,4 +1,4 @@
-@import "colors.css";
+@import 'colors.css';
 
 /* **main** */
 .blogs {
@@ -41,16 +41,16 @@
   top: 0.1em;
   left: 0.625em;
   padding-right: 0.375rem;
-  font-family: "Material Icons", fantasy;
+  font-family: 'Material Icons', fantasy;
   font-size: 1em;
 }
 
 .button-show::after {
-  content: "\e5cf";
+  content: '\e5cf';
 }
 
 .button-hide::after {
-  content: "\e5ce";
+  content: '\e5ce';
 }
 
 .button-show:active,
@@ -83,13 +83,13 @@
 }
 
 .article__item:before {
-  content: "\e876";
+  content: '\e876';
   position: relative;
   top: 0.2em;
   left: -0.75em;
   padding: 0.25em;
   color: var(--scarlet);
-  font-family: "Material Icons", fantasy;
+  font-family: 'Material Icons', fantasy;
   background-color: rgba(157, 150, 131, 0.1);
   border-radius: 50%;
 }

@@ -81,7 +81,21 @@ get_header();
   <section class="assistance">
     <div class="content">
       <h2 class="assistance__header"><?php the_field('towing_head') ?></h2>
-      <p class="assistance__content"><?php the_field('towing_descr') ?></p>
+      <?php
+      $text = get_field('towing_descr');
+
+      // Разбиваем по строкам (Enter)
+      $lines = preg_split('/\r\n|\r|\n/', $text);
+
+      // Оборачиваем каждую строку в <span class="indent">
+      $formatted_lines = array_map(function($line) {
+          $line = trim($line);
+          return $line ? '<span class="indent">' . esc_html($line) . '</span>' : '';
+      }, $lines);
+
+      // Склеиваем с <br> между ними
+      echo '<p class="assistance__content">' . implode('<br>', $formatted_lines) . '</p>';
+      ?>
     </div>
   </section>
   <section class="services background-car">

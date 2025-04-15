@@ -25,6 +25,14 @@
     if (is_page('articles')) {
       wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/articles.css');
     }
+
+    if (is_page('vacancies')) {
+      wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/vacancies.css');
+    }
+
+    if (is_page('contacts')) {
+      wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/css/contacts.css');
+    }
     
     wp_enqueue_script('autorep-scripts', get_template_directory_uri() . '/assets/js/modal.js', array(), null, true);
     wp_enqueue_script('scroll-scripts', get_template_directory_uri() . '/assets/js/scroll-up.js', array(), null, true);

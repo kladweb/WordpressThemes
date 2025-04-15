@@ -87,8 +87,19 @@
   padding: 0.375em 0;
   color: var(--grayBlue);
   font-size: 1.125em;
+  text-align: justify;
+}
+
+.roadside__content {
   line-height: 1.5em;
-  text-indent: 2em each-line;
+  text-indent: 2em;
+}
+
+.indent {
+  display: inline-block;
+  text-indent: 2em;
+  line-height: 1.5em;
+  text-indent: 2em;
 }
 
 .services {
@@ -141,6 +152,7 @@
 
 .roadside__content--position-right {
   margin-top: 5em;
+  margin-left: auto;
   display: inline-block;
   width: 36%;
   vertical-align: top;

@@ -1,4 +1,4 @@
-@import "colors.css";
+@import 'colors.css';
 
 /*inline cards*/
 .vacancies {
@@ -13,6 +13,13 @@
   color: var(--darkBlue);
 }
 
+.vacancies_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2em;
+}
+
 .vacancy {
   display: inline-block;
   width: 30%;
@@ -22,11 +29,6 @@
   text-align: left;
   vertical-align: top;
   border-radius: 1em;
-}
-
-.vacancy--position-center {
-  margin-left: 2em;
-  margin-right: 2em;
 }
 
 .vacancy__rectangle {
@@ -106,7 +108,7 @@
 }
 
 .card__items li:before {
-  content: "\2014";
+  content: '\2014';
   padding-right: 0.5em;
 }
 

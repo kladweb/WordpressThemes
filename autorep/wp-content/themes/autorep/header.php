@@ -51,10 +51,10 @@
             <a class="main-nav__link" href="/articles/">Статьи</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="pages/vacancies.html">Вакансии</a>
+            <a class="main-nav__link" href="/vacancies/">Вакансии</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="pages/contacts.html">Контакты</a>
+            <a class="main-nav__link" href="/contacts/">Контакты</a>
           </li>
           <li class="main-nav__item main-nav__item-button">
             <button class="button-typical main-nav__button">Связаться с нами</button>
