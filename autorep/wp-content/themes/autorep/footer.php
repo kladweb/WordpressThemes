@@ -58,28 +58,32 @@
         </ul>
         <div class="footer__messengers">
           <?php 
-              $sociallink = get_field('viber', 2);
-              if (!empty($sociallink)): ?>
-          <!-- <img class="footer__logo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> -->
-          <a class="footer__social-Viber" href="<?php echo $sociallink; ?>">
+              $viberlink = get_field('viber', 2);
+              if (!empty($viberlink)): ?>
+          <a class="footer__social-Viber" href="<?php echo $viberlink; ?>">
             <img class="footer__social" src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/Viber.png"
               alt="Viber">
           </a>
-          <?php endif; ?>
-
-          <!-- <a class="footer__social-Viber" href="pages/contacts.html">
-            <img class="footer__social" src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/Viber.png"
-              alt="Viber">
-          </a> -->
-
-          <a class="footer__social-Telegram" href="pages/contacts.html">
+          <?php endif; 
+          ?>
+          <?php 
+              $telegramlink = get_field('telegram', 2);
+              if (!empty($telegramlink)): ?>
+          <a class="footer__social-Telegram" href="<?php echo $telegramlink; ?>">
             <img class="footer__social" src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/Telegram.png"
               alt="Telegram">
           </a>
-          <a class="footer__social-Instagram" href="pages/contacts.html">
+          <?php endif; 
+          ?>
+          <?php 
+              $instagramlink = get_field('instagram', 2);
+              if (!empty($instagramlink)): ?>
+          <a class="footer__social-Instagram" href="<?php echo $instagramlink; ?>">
             <img class="footer__social" src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/Instagram.png"
               alt="Instagram">
           </a>
+          <?php endif; 
+          ?>
         </div>
       </div>
     </div>

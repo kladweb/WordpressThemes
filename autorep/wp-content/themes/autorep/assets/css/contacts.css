@@ -1,4 +1,4 @@
-@import "colors.css";
+@import 'colors.css';
 
 .content-blocks {
   display: flex;
@@ -38,7 +38,7 @@
 .contacts__item:before {
   position: relative;
   top: 0.2em;
-  background-color: #97BE09;
+  background-color: #97be09;
   margin-right: 0.5em;
   padding: 0.7em 0.4em 0.2em 0.4em;
   border-radius: 0.25em;
@@ -66,7 +66,7 @@
 }
 
 .contacts__item--type-address-reg:before {
-  content: "";
+  content: '';
   opacity: 0;
   padding-left: 2.75em;
 }
@@ -142,7 +142,7 @@
 }
 
 .form-input {
-  margin-bottom: 1em;
+  margin-top: 1em;
   padding: 1em;
   display: block;
   width: calc(100% - 2em);
@@ -179,6 +179,12 @@
 .form-submit:hover,
 .form-submit:active {
   background-color: rgba(247, 58, 24, 0.5);
+}
+
+.wpcf7 .wpcf7-form .wpcf7-response-output {
+  color: rgb(220, 50, 50);
+  margin: -1rem auto 1rem;
+  width: calc(100% - 8.2em);
 }
 
 /* **@media** */
