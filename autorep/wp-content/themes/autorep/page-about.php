@@ -19,7 +19,8 @@ get_header();
 <div class="content container-flex">
   <aside class="popular">
     <h2 class="popular-head">Наши партнеры</h2>
-    <?php 
+    <div>
+      <?php 
         $my_posts = get_posts( array(
           'numberposts' => -1,
           'category_name' => 'partners',
@@ -35,60 +36,50 @@ get_header();
             setup_postdata( $post );
             $image = get_field('company_logo');
             ?>
-    <div class="popular__title">
-      <a class="popular__link" href="<?php the_field('company_url') ?>" title="<?php echo $image['alt']; ?>"
-        target="_blank">
-        <img class="popular__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
-          title="<?php echo $image['alt']; ?>">
-      </a>
-      <a class="popular__item" href="<?php the_field('company_url') ?>" target="_blank">
-        <span><?php the_field('company_name') ?></span>
-      </a>
-    </div>
-    <?php
+      <div class="popular__title">
+        <a class="popular__link" href="<?php the_field('company_url') ?>" title="<?php echo $image['alt']; ?>"
+          target="_blank">
+          <img class="popular__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
+            title="<?php echo $image['alt']; ?>">
+        </a>
+        <a class="popular__item" href="<?php the_field('company_url') ?>" target="_blank">
+          <span><?php the_field('company_name') ?></span>
+        </a>
+      </div>
+      <?php
       }
       wp_reset_postdata();
     ?>
+    </div>
     <h2 class="popular-head">Популярные статьи</h2>
-    <div class="popular__title">
-      <a class="popular__link" href="articles.html#car-rims">
-        <img class="popular__img" src="../img/shared/car-rims.jpg" alt="car-rims">
-      </a>
-      <a class="popular__item" href="articles.html#car-rims">
-        <span>Какие диски лучше стальные или легкосплавные?</span>
-      </a>
-    </div>
-    <div class="popular__title">
-      <a class="popular__link" href="articles.html#electro-car">
-        <img class="popular__img" src="../img/services/electrocar.jpg" alt="electrocar">
-      </a>
-      <a class="popular__item" href="articles.html#electro-car">
-        <span>Гибридные и электрические автомобили</span>
-      </a>
-    </div>
-    <div class="popular__title">
-      <a class="popular__link" href="articles.html#car-body">
-        <img class="popular__img" src="../img/shared/car-body.jpg" alt="car-body">
-      </a>
-      <a class="popular__item" href="articles.html#car-body">
-        <span>Проверяем кузов автомобиля перед покупкой</span>
-      </a>
-    </div>
-    <div class="popular__title">
-      <a class="popular__link" href="articles.html#car-greasing">
-        <img class="popular__img" src="../img/shared/car-greasing.jpg" alt="car-greasing">
-      </a>
-      <a class="popular__item" href="articles.html#car-greasing">
-        <span>Автомобильная силиконовая смазка</span>
-      </a>
-    </div>
-    <div class="popular__title popular__title--pos-last">
-      <a class="popular__link" href="articles.html#car-abs">
-        <img class="popular__img" src="../img/shared/car-abs.jpg" alt="car-abs">
-      </a>
-      <a class="popular__item" href="articles.html#car-abs">
-        <span>Три буквы: почему горит лампочка ABS и как это исправить?</span>
-      </a>
+    <div class="popular__list">
+      <?php 
+        $my_posts = get_posts( array(
+          'numberposts' => -1,
+          'category_name' => 'article',
+          'orderby'     => 'date',
+          'order'       => 'ASC',
+          'post_type'   => 'post',
+          'suppress_filters' => true,
+        ) );
+          global $post;
+          foreach( $my_posts as $post ) {
+            setup_postdata( $post );
+            $image = get_field('article_img');
+            ?>
+
+      <div class="popular__title">
+        <a class="popular__link" href="#<?php the_field('article_id') ?>" title="<?php the_title() ?>">
+          <img class="popular__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+        </a>
+        <a class="popular__item" href="#<?php the_field('article_id') ?>">
+          <span><?php the_title() ?></span>
+        </a>
+      </div>
+      <?php
+      }
+      wp_reset_postdata();
+    ?>
     </div>
   </aside>
   <main class="main-about">
