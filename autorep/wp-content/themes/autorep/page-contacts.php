@@ -10,7 +10,7 @@ get_header();
 
 <div class="page-header">
   <div class="content">
-    <span><a class="page-header__home" href="../index.html">Главная</a></span>
+    <span><a class="page-header__home" href="/">Главная</a></span>
     <span class="page-header__sep">/</span>
     <span class="page-header__title">Контакты</span>
     <h1 class="page-header__name">Контакты</h1>
@@ -72,7 +72,7 @@ get_header();
         <?php 
               $instagramlink = get_field('instagram', 2);
               if (!empty($instagramlink)): ?>
-        <a class="contacts__Instagram" href="<?php echo $instagramlink; ?>#" title="Instagram">
+        <a class="contacts__Instagram" href="<?php echo $instagramlink; ?>" title="Instagram">
           <img class="contacts__soc contacts__Instagram-w"
             src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/Instagram_white.png" alt="Instagram">
           <img class="contacts__soc contacts__Instagram-c"

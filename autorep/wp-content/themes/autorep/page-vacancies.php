@@ -10,7 +10,7 @@ get_header();
 
 <div class="page-header">
   <div class="content">
-    <span><a class="page-header__home" href="../index.html">Главная</a></span>
+    <span><a class="page-header__home" href="/">Главная</a></span>
     <span class="page-header__sep">/</span>
     <span class="page-header__title">Вакансии</span>
     <h1 class="page-header__name">Вакансии</h1>

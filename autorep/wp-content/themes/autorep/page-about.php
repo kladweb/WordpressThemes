@@ -10,7 +10,7 @@ get_header();
 
 <div class="page-header">
   <div class="content">
-    <span><a class="page-header__home" href="../index.html">Главная</a></span>
+    <span><a class="page-header__home" href="/">Главная</a></span>
     <span class="page-header__sep">/</span>
     <span class="page-header__title">О компании</span>
     <h1 class="page-header__name">О компании</h1>
@@ -69,10 +69,10 @@ get_header();
             ?>
 
       <div class="popular__title">
-        <a class="popular__link" href="#<?php the_field('article_id') ?>" title="<?php the_title() ?>">
+        <a class="popular__link" href="/articles/#<?php the_field('article_id') ?>" title="<?php the_title() ?>">
           <img class="popular__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
         </a>
-        <a class="popular__item" href="#<?php the_field('article_id') ?>">
+        <a class="popular__item" href="/articles/#<?php the_field('article_id') ?>">
           <span><?php the_title() ?></span>
         </a>
       </div>

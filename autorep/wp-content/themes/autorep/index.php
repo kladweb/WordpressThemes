@@ -42,7 +42,7 @@
               высококачественный автосервис в наших автосервисах.
             </li>
           </ul>
-          <a class="button-typical about__button" role="button" href="pages/about.html">
+          <a class="button-typical about__button" role="button" href="/about/">
             <span>Узнать подробнее</span>
           </a>
           <div class="clear"></div>

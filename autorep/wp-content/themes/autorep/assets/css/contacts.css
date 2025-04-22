@@ -187,6 +187,17 @@
   width: calc(100% - 8.2em);
 }
 
+.disclaimer_info {
+  margin-top: 1rem;
+  color: var(--pastel);
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.disclaimer_info a {
+  color: var(--pastel);
+}
+
 /* **@media** */
 @media (max-width: 62rem) {
   .content-blocks {

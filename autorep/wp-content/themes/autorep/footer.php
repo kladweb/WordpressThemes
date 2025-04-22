@@ -8,7 +8,7 @@
   <div class="footer-basic">
     <div class="content footer__main-block">
       <div class="footer__company">
-        <a class="footer__brand" href="index.html" title="На главную страницу">
+        <a class="footer__brand" href="/" title="На главную страницу">
           <?php 
               $image = get_field('logo_footer', 2);
               if (!empty($image)): ?>

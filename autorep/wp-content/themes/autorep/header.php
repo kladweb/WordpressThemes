@@ -28,16 +28,47 @@
         <button class="modal__close" type="button"></button>
       </div>
     </div>
+    <div class="modal2">
+      <h1 class="modal__number">Внимание!</h1>
+      <h2 class="modal__title">Этот сайт продаётся!</h2>
+      <p class="modal2__info">Есть возможность менять контент через административную панель.</p>
+      <p class="modal2__info">Сайт может быть адаптирован под Ваш бизнес.</p>
+      <p class="modal2__info">Добавим/удалим/изменим любые элементы/страницы сайта по Вашему желанию и вкусу.</p>
+      <div class="modal2__actions">
+        <a class="modal2__action" type="button" href="https://t.me/kladpav" target="_blank">Подробнее</a>
+        <a class="modal2__action" type="button" href="https://t.me/kladpav" target="_blank">Купить</a>
+        <a class="modal2__action modal2__close" type="button">Закрыть</a>
+        <button class="modal__close" type="button"></button>
+      </div>
+    </div>
     <div class="content">
       <!-- <a class="main-header__brand" href="index.html" title="На главную страницу">
           <img class="main-header__logo" src="<?php echo bloginfo('template_url'); ?>/assets/img/logos/AUTO-REP_white.png" alt="AUTO-REP">
         </a> -->
-      <div class="main-header__brand" href="index.html" title="На главную страницу">
+      <div class="main-header__brand" title="На главную страницу">
         <?php the_custom_logo() ?>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" data-slide="1">
         <div class="menu__icon"><span></span></div>
-        <ul class="main-nav__items">
+
+        <?php 
+            wp_nav_menu( [
+              'menu'            => 'Main',
+              'container'       => false,
+              'container_class' => '',
+              'container_id'    => '',
+              'menu_class'      => 'main-nav__item',
+              'echo'            => true,
+              'fallback_cb'     => 'wp_page_menu',
+              'items_wrap'      => '<ul class="main-nav__items">%3$s</ul>',
+              'depth'           => 1,
+            ] );
+
+        ?>
+
+
+
+        <!-- <ul class="main-nav__items">
           <li class="main-nav__item">
             <a class="main-nav__link" href="/services/">Наши услуги</a>
           </li>
@@ -59,7 +90,7 @@
           <li class="main-nav__item main-nav__item-button">
             <button class="button-typical main-nav__button">Связаться с нами</button>
           </li>
-        </ul>
+        </ul> -->
       </nav>
     </div>
   </header>

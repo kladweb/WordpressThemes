@@ -1,5 +1,7 @@
 <?php
   add_theme_support( 'custom-logo' );
+  add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'menus' );
   add_action('wp_enqueue_scripts', 'autorep_scripts');
 
   function autorep_scripts() {
@@ -55,5 +57,39 @@ alert('Inside specific page');
 <?php 
   }
 */
+
+add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3);
+
+function filter_nav_menu_link_attributes($atts, $item, $args) {
+  if ($args->menu === 'Main') {
+    $atts['class'] = 'main-nav__link';
+
+    if ($item->current) {
+      $atts['class'] .= ' main-nav__link-active';
+    }
+  };
+  return $atts;
+}
+
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class($classes, $item){
+    $classes[] = 'main-nav__item';
+    return $classes;
+}
+
+
+add_filter('wp_nav_menu_items', 'add_custom_menu_button', 10, 2);
+
+function add_custom_menu_button($items, $args) {
+    if ($args->menu === 'Main') {
+        $label = get_field('menu_button_label', 2) ?: 'Связаться с нами';
+        $items .= '<li class="main-nav__item main-nav__item-button">';
+        $items .= '<button class="button-typical main-nav__button">' . esc_html($label) . '</button>';
+        $items .= '</li>';
+    }
+    return $items;
+}
 
 ?>

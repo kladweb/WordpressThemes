@@ -11,7 +11,7 @@ get_header();
   <section class="towing background-car">
     <div class="content">
       <div class="page-header__inner">
-        <span><a class="page-header__home" href="../index.html">Главная</a></span>
+        <span><a class="page-header__home" href="/">Главная</a></span>
         <span class="page-header__sep">/</span>
         <span class="page-header__title">Буксировка и техпомощь</span>
       </div>
