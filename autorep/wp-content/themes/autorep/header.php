@@ -32,12 +32,17 @@
       <h1 class="modal__number">Внимание!</h1>
       <h2 class="modal__title">Этот сайт продаётся!</h2>
       <p class="modal2__info">Есть возможность менять контент через административную панель.</p>
-      <p class="modal2__info">Сайт может быть адаптирован под Ваш бизнес.</p>
-      <p class="modal2__info">Добавим/удалим/изменим любые элементы/страницы сайта по Вашему желанию и вкусу.</p>
+      <p class="modal2__info">Сайт ещё находится в процессе разработки и может быть адаптирован под Ваш бизнес.</p>
+      <p class="modal2__info">Добавим/удалим/изменим любые элементы/страницы/название сайта по Вашему желанию и вкусу.
+      </p>
       <div class="modal2__actions">
-        <a class="modal2__action" type="button" href="https://t.me/kladpav" target="_blank">Подробнее</a>
-        <a class="modal2__action" type="button" href="https://t.me/kladpav" target="_blank">Купить</a>
-        <a class="modal2__action modal2__close" type="button">Закрыть</a>
+        <div>
+          <a class="modal2__action" type="button" href="https://t.me/kladpav" target="_blank">Подробнее</a>
+        </div>
+        <div>
+          <a class="modal2__action" type="button" href="https://t.me/kladpav" target="_blank">Купить</a>
+        </div>
+        <div class="modal2__action modal2__close" type="button">Закрыть</div>
         <button class="modal__close" type="button"></button>
       </div>
     </div>

@@ -212,6 +212,14 @@ body._lock {
   text-align: center;
 }
 
+.modal2__actions div {
+  display: inline-block;
+}
+
+.modal2__actions div:nth-child(2) {
+  margin: 0 0.5rem;
+}
+
 .modal2__action {
   display: inline-block;
   text-decoration: none;
